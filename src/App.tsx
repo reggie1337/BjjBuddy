@@ -1,25 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Link } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div
+        className="backgroundPhoto"
+        style={{
+          backgroundImage: "url(/images/backgroundImage.jpeg)",
+          // backgroundSize: "cover",
+          width: "100vw",
+          height: "100vh",
+          // opacity: 0.9,
+        }}
+      >
+        <BrowserRouter>
+          <div className="Front-page">
+            <h1 className="title">Jiujitsu-Buddy</h1>
+            <Link to={"/home"}>
+              <button className="enter" type="button">
+                JOURNAL
+              </button>
+            </Link>
+            <Link to={"https://smoothcomp.com"}>
+              <button className="site">COMPETE</button>
+            </Link>
+          </div>
+        </BrowserRouter>
+      </div>
+    </>
   );
 }
 
