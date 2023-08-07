@@ -14,6 +14,7 @@ body{
 
 .App {
   text-align: center;
+  margin-top: 0;
 }
 
 
@@ -26,6 +27,9 @@ body{
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  object-fit: contain;
+  width: auto;
+  
 }
 
 .App-link {
@@ -38,30 +42,69 @@ body{
 }
 
 .enter {
+  background-color:white;
+  border: 1px solid #303134;
+  border-radius: 4px;
   color: black;
-  background-color: white;
-  border-radius: 50%;
-  padding: 12px;
-  margin-top: 10px;
-  
+  font-family: Roboto,arial,sans-serif;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
 }
 
-.enter:active {
+
+/* .enter:active {
   box-shadow: 0 2px #666;
   transform: translateY(4px);
+} */
+
+.enter:hover {
+  background-color: lightgray;
 }
 
 .site {
+  background-color:white;
+  border: 1px solid #303134;
+  border-radius: 4px;
   color: black;
-  background-color: white;
-  border-radius: 50%;
-  padding: 12px;
-  margin-left: 9px;
+  font-family: Roboto,arial,sans-serif;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
 }
 
-.site:active {
-  box-shadow: 0 2px #666;
-  transform: translateY(4px);
+.site:hover {
+  background-color: lightgray;
+
+}
+
+.add {
+  background-color:white;
+  border: 1px solid #303134;
+  border-radius: 4px;
+  color: black;
+  font-family: Roboto,arial,sans-serif;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
 }
 
 
@@ -79,4 +122,18 @@ body{
   background-repeat: no-repeat;
   /* clip-path: polygon(100% 40%, 100px 0 , 0 400px, 0 50%); */
 }
+
+.textArea {
+  margin-left: 15px;
+  margin-top: 50px;
+}
  
+.appTitle {
+  margin-left: 14px;
+}
+
+
+.calander{
+  margin-top: 50px;
+  ;
+}
