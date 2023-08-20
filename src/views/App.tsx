@@ -4,6 +4,7 @@ import { Input } from "@mui/material";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import dayjs, { Dayjs } from "dayjs";
+import ResponsiveAppBar from "./AppToolBar";
 
 export default function App() {
   const currentDate = dayjs();
@@ -33,7 +34,8 @@ export default function App() {
 
   return (
     <div className="app">
-      <h1 className="appTitle">Training Journal</h1>
+      {/* <h1 className="appTitle">Training Journal</h1> */}
+      <ResponsiveAppBar />
       <Input
         className="textArea"
         size="medium"
@@ -44,6 +46,7 @@ export default function App() {
       />
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <DatePicker
+          className="calander"
           label="when did you train?"
           value={newDate}
           onChange={(newValue) => setNewDate(newValue)}
@@ -52,7 +55,7 @@ export default function App() {
       <button className="add" onClick={() => addTodo()}>
         Add
       </button>
-      <div
+      {/* <div
         style={{
           margin: 10,
         }}
@@ -62,7 +65,7 @@ export default function App() {
             Home
           </button>
         </Link>
-      </div>
+      </div> */}
 
       <ul>
         {" "}
