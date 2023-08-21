@@ -46,7 +46,7 @@ export default function App() {
       />
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <DatePicker
-          className="calander"
+          className="calender"
           label="when did you train?"
           value={newDate}
           onChange={(newValue) => setNewDate(newValue)}

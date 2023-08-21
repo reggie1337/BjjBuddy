@@ -14,7 +14,7 @@ body{
 
 .App {
   text-align: center;
-  margin-top: 0;
+  margin-top: 5;
 }
 
 
@@ -91,13 +91,16 @@ body{
 }
 
 .add {
+  position: relative;
   background-color:white;
   border: 1px solid #303134;
   border-radius: 4px;
   color: black;
   font-family: Roboto,arial,sans-serif;
   font-size: 14px;
-  margin: 11px 4px;
+  margin: 16px ;
+  left: 10px;
+  bottom: 5px;
   padding: 0 16px;
   line-height: 27px;
   height: 36px;
@@ -133,6 +136,11 @@ body{
 }
 
 
-.calander{
-  margin-top: 50px;
+.calender{
+  display: inline-block;
+  padding: 5px;
+  position: relative;
+  top: 27px ;
+  left: 10px;
+
 }

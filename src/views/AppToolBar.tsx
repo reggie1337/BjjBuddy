@@ -14,7 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
 
-const pages = ["Home", "Archives", "Comp days"];
+const pages = ["Archives", "Comp days"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
@@ -42,16 +42,16 @@ function ResponsiveAppBar() {
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-            <Link
+            {/* <Link
               id="home button"
               to="/"
               style={{ textDecoration: "none" }}
-            ></Link>
+            ></Link> */}
             <Typography
               variant="h6"
+              href="/"
               noWrap
               component="a"
-              // href="/"
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
@@ -62,7 +62,7 @@ function ResponsiveAppBar() {
                 textDecoration: "none",
               }}
             >
-              BATTLE BUDDY
+              HOME
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
@@ -117,7 +117,7 @@ function ResponsiveAppBar() {
                 textDecoration: "none",
               }}
             >
-              LOGO
+              BATTLE BUDDY
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
