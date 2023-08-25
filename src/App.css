@@ -144,3 +144,8 @@ body{
   left: 10px;
 
 }
+
+.taskTable {
+  margin-left: 50px;
+  margin-top: 50px;
+}

@@ -8,10 +8,12 @@ import ResponsiveAppBar from "./AppToolBar";
 
 export default function App() {
   const currentDate = dayjs();
-  const dateFormat = dayjs().format("YYYY_MM_DD");
+  const dateFormat = dayjs().format("MM-DD-YYYY");
 
   const [newTask, setNewTask] = useState<string>("");
-  const [newTodos, setTodos] = useState<{ id: number; value: string }[]>([]);
+  const [newTodos, setTodos] = useState<
+    { id: number; value: string; date: Dayjs }[]
+  >([]);
   const [newDate, setNewDate] = useState<Dayjs | null>(null);
 
   function addTodo() {
@@ -23,6 +25,7 @@ export default function App() {
     const newTodo = {
       id: Math.random(),
       value: trimmedTask,
+      date: newDate ?? currentDate,
     };
     setTodos((oldList) => [...oldList, newTodo]);
     setNewTask("");
@@ -66,7 +69,7 @@ export default function App() {
           </button>
         </Link>
       </div> */}
-
+      {/* 
       <ul>
         {" "}
         {newTodos.map((newTodo) => {
@@ -84,7 +87,31 @@ export default function App() {
             </li>
           );
         })}
-      </ul>
+      </ul> */}
+      <table className="taskTable">
+        <thead>
+          <tr>
+            <th>Todo</th>
+            {newDate !== null && <th>Date</th>}
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {newTodos.map((newTodo) => (
+            <tr key={newTodo.id}>
+              <td>{newTodo.value}</td>
+              <td>{newTodo.date.format("MM-DD-YYYY")}</td>
+              <td>
+                <button className="enter" onClick={() => removeTodo(newTodo)}>
+                  delete
+                </button>
+                {/* add archive function and send to archive pages */}
+                <button className="enter">archive</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
