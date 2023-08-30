@@ -127,8 +127,8 @@ body{
 }
 
 .textArea {
-  margin-left: 15px;
-  margin-top: 50px;
+  /* margin-left:  ;  */
+  /* margin-top:  */
 }
  
 .appTitle {
@@ -138,14 +138,14 @@ body{
 
 .calender{
   display: inline-block;
-  padding: 5px;
-  position: relative;
-  top: 27px ;
-  left: 10px;
-
+  margin-left: 8px !important;
 }
 
 .taskTable {
   margin-left: 50px;
   margin-top: 50px;
+}
+
+.page-container {
+  padding: 20px;
 }
