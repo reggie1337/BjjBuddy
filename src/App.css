@@ -118,7 +118,7 @@ body{
 }
 
 .backgroundPhoto {
-  opacity: 0.9;
+  opacity: 1;
   position: relative;
   background-size: cover;
   background-position: center;
