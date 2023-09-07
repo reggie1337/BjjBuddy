@@ -10,16 +10,16 @@ export default function App() {
   const dateFormat = dayjs().format("MM-DD-YYYY");
 
   const [journalEntries, setJournalEntries] = useState<JournalEntry[]>([]);
-  const [newEntries, setEntries] = useState<JournalEntry[]>([]);
-  const [newDate, setNewDate] = useState<Dayjs | null>(null);
+  // const [newEntries, setEntries] = useState<JournalEntry[]>([]);
+  // const [newDate, setNewDate] = useState<Dayjs | null>(null);
 
   const AddJournalEntryCallback = (newEntry: JournalEntry) => {
     setJournalEntries((prevEntries) => [...prevEntries, newEntry]);
   };
 
   function removeEntry(id: number) {
-    setEntries((oldList) =>
-      oldList.filter((newJournalItem) => newJournalItem.id !== id)
+    setJournalEntries((oldList) =>
+      oldList.filter((journalEntries) => journalEntries.id !== id)
     );
   }
 
