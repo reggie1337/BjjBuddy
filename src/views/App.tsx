@@ -12,11 +12,11 @@ export default function App() {
   const [journalEntries, setJournalEntries] = useState<JournalEntry[]>([]);
   // const [newEntries, setEntries] = useState<JournalEntry[]>([]);
   // const [newDate, setNewDate] = useState<Dayjs | null>(null);
-
+  // bubble function that calls back to the AddItems file
   const AddJournalEntryCallback = (newEntry: JournalEntry) => {
     setJournalEntries((prevEntries) => [...prevEntries, newEntry]);
   };
-
+  // bubble function that calls back to the DataGrid file
   function removeEntry(id: number) {
     setJournalEntries((oldList) =>
       oldList.filter((journalEntries) => journalEntries.id !== id)

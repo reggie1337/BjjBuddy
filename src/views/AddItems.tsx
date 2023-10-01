@@ -1,30 +1,29 @@
-import { useState } from "react";
-import * as React from "react";
-import { TextField } from "@mui/material";
+import React, { useState } from "react";
+import { TextField, Button } from "@mui/material";
 import dayjs, { Dayjs } from "dayjs";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { JournalEntry } from "../models/JournalEntry";
 
-interface Item {
-  item?: string;
+interface AddJournalEntryProps {
   addJournalEntryCallBack: (newEntry: JournalEntry) => void;
 }
 
-const AddJournalEntry: React.FC<Item> = ({ addJournalEntryCallBack }) => {
+const AddJournalEntry: React.FC<AddJournalEntryProps> = ({
+  addJournalEntryCallBack,
+}) => {
   const currentDate = dayjs();
-  const dateFormat = dayjs().format("MM-DD-YYYY");
   const [newEntry, setNewEntry] = useState<string>("");
   const [newDate, setNewDate] = useState<Dayjs | null>(null);
 
-  const flagMissingEntry = () => {
+  const handleAddEntry = () => {
     const trimmedEntry = newEntry.trim();
     if (!trimmedEntry) {
       alert("Please Add Entry");
       return;
     }
 
-    const newJournalItem = {
+    const newJournalItem: JournalEntry = {
       id: Math.random(),
       value: trimmedEntry,
       date: newDate ?? currentDate,
@@ -35,6 +34,7 @@ const AddJournalEntry: React.FC<Item> = ({ addJournalEntryCallBack }) => {
     setNewEntry("");
     setNewDate(null);
   };
+
   return (
     <>
       <TextField
@@ -54,9 +54,9 @@ const AddJournalEntry: React.FC<Item> = ({ addJournalEntryCallBack }) => {
           onChange={(newValue) => setNewDate(newValue)}
         />
       </LocalizationProvider>
-      <button className="add" onClick={flagMissingEntry}>
+      <Button className="add" onClick={handleAddEntry}>
         Add
-      </button>
+      </Button>
     </>
   );
 };
