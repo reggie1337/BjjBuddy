@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import { DataGrid, type GridColDef } from '@mui/x-data-grid';
 import { type JournalEntry } from '../types/JournalEntry';
-import JournalModal from './Modal';
+import EditItemModal from './EditItemModal';
 
 interface Props {
     rows: JournalEntry[];
@@ -39,7 +39,7 @@ const DataGridDemo: React.FC<Props> = ({ rows, removeTodosCallback }) => {
                 return (
                     <>
                         {/* <button className="enter">Open</button> */}
-                        <JournalModal />
+                        <EditItemModal item={params.row} />
                         <button className="enter" onClick={removeTodo}>
                             Delete
                         </button>

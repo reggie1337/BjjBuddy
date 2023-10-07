@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { TextField, Button } from '@mui/material';
 import dayjs, { type Dayjs } from 'dayjs';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
+import { DatePicker } from '@mui/x-date-pickers';
 import { type JournalEntry } from '../types/JournalEntry';
 
 interface AddJournalEntryProps {
@@ -45,16 +44,14 @@ const AddJournalEntry: React.FC<AddJournalEntryProps> = ({ addJournalEntryCallBa
                     setNewEntry(e.target.value);
                 }}
             />
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DatePicker
-                    className="calender"
-                    label="when did you train?"
-                    value={newDate}
-                    onChange={newValue => {
-                        setNewDate(newValue);
-                    }}
-                />
-            </LocalizationProvider>
+            <DatePicker
+                className="calender"
+                label="when did you train?"
+                value={newDate}
+                onChange={newValue => {
+                    setNewDate(newValue);
+                }}
+            />
             <Button className="enter" onClick={handleAddEntry}>
                 Add
             </Button>
