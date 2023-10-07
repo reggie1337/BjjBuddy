@@ -8,15 +8,13 @@ body {
     font-family: sans-serif;
     font-weight: 400;
     font-size: 16px;
-    /* padding: 30px; */
 }
 
-.App {
-    text-align: center;
+.app {
     margin-top: 5;
 }
 
-.App-header {
+.app-header {
     background-color: #282c34;
     min-height: 100vh;
     display: flex;
@@ -29,7 +27,7 @@ body {
     width: auto;
 }
 
-.App-link {
+.app-link {
     color: #61dafb;
 }
 
@@ -53,11 +51,6 @@ body {
     cursor: pointer;
     user-select: none;
 }
-
-/* .enter:active {
-  box-shadow: 0 2px #666;
-  transform: translateY(4px);
-} */
 
 .enter:hover {
     background-color: lightgray;
@@ -104,27 +97,21 @@ body {
     user-select: none;
 }
 
-.Front-page {
+.front-page {
     position: absolute;
     top: 30%;
     left: 65%;
 }
 
-.backgroundPhoto {
+.background-photo {
     opacity: 1;
     position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* clip-path: polygon(100% 40%, 100px 0 , 0 400px, 0 50%); */
 }
 
-.textArea {
-    /* margin-left:  ;  */
-    /* margin-top:  */
-}
-
-.appTitle {
+.app-title {
     margin-left: 14px;
 }
 
@@ -133,11 +120,17 @@ body {
     margin-left: 8px !important;
 }
 
-.taskTable {
+.task-table {
     margin-left: 50px;
     margin-top: 50px;
 }
 
 .page-container {
     padding: 20px;
+}
+
+.item-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
 }

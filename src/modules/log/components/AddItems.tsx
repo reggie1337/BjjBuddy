@@ -34,9 +34,8 @@ const AddJournalEntry: React.FC<AddJournalEntryProps> = ({ addJournalEntryCallBa
     };
 
     return (
-        <>
+        <div className="item-form">
             <TextField
-                className="textArea"
                 variant="outlined"
                 size="medium"
                 type="text"
@@ -59,7 +58,7 @@ const AddJournalEntry: React.FC<AddJournalEntryProps> = ({ addJournalEntryCallBa
             <Button className="enter" onClick={handleAddEntry}>
                 Add
             </Button>
-        </>
+        </div>
     );
 };
 

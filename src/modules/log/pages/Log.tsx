@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ResponsiveAppBar from '../../../shared/components/AppToolBar';
 import DataGridDemo from '../components/DataGrid';
 import { type JournalEntry } from '../types/JournalEntry';
-import AddJournalEntry from '../components/AddItems';
+import AddItems from '../components/AddItems';
 
 export default function App(): JSX.Element {
     const [journalEntries, setJournalEntries] = useState<JournalEntry[]>([]);
@@ -19,13 +19,9 @@ export default function App(): JSX.Element {
 
     return (
         <div className="app">
-            {/* <h1 className="appTitle">Training Journal</h1> */}
             <ResponsiveAppBar />
             <div className="page-container">
-                <AddJournalEntry addJournalEntryCallBack={AddJournalEntryCallback} />
-                {/* <button className="add" onClick={() => AddJournalEntry()}>
-          Add
-        </button> */}
+                <AddItems addJournalEntryCallBack={AddJournalEntryCallback} />
                 <DataGridDemo rows={journalEntries} removeTodosCallback={removeEntry} />
             </div>
         </div>

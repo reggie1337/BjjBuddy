@@ -3,15 +3,13 @@ import { Link } from 'react-router-dom';
 function Home(): JSX.Element {
     return (
         <div
-            className="backgroundPhoto"
+            className="background-photo"
             style={{
                 backgroundImage: 'url(/images/backgroundImage.jpeg)',
-                // backgroundSize: "cover",
                 width: '100vw',
                 height: '100vh',
-                // opacity: 0.9,
             }}>
-            <div className="Front-page">
+            <div className="front-page">
                 <h1 className="title">Battle-Buddy</h1>
                 <Link to={'/log'}>
                     <button className="enter" type="button">
