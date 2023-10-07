@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import "./index.css";
-import Home from "./views/home";
-import App from "./views/App";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import Home from "./modules/home/pages/Home";
+import Log from "./modules/log/pages/Log";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./styles.css";
 
 const router = createBrowserRouter([
   {
@@ -11,8 +11,8 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "App/:AppId",
-    element: <App />,
+    path: "log",
+    element: <Log />,
   },
 ]);
 

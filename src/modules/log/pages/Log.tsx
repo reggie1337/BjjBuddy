@@ -1,14 +1,10 @@
 import React, { useState } from "react";
-import dayjs, { Dayjs } from "dayjs";
-import ResponsiveAppBar from "./AppToolBar";
-import DataGridDemo from "./DataGrid";
-import { JournalEntry } from "../models/JournalEntry";
-import AddJournalEntry from "./AddItems";
+import ResponsiveAppBar from "../../../shared/components/AppToolBar";
+import DataGridDemo from "../components/DataGrid";
+import { type JournalEntry } from "../types/JournalEntry";
+import AddJournalEntry from "../components/AddItems";
 
 export default function App() {
-  const currentDate = dayjs();
-  const dateFormat = dayjs().format("MM-DD-YYYY");
-
   const [journalEntries, setJournalEntries] = useState<JournalEntry[]>([]);
   // const [newEntries, setEntries] = useState<JournalEntry[]>([]);
   // const [newDate, setNewDate] = useState<Dayjs | null>(null);

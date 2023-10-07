@@ -3,7 +3,7 @@ import { TextField, Button } from "@mui/material";
 import dayjs, { Dayjs } from "dayjs";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
-import { JournalEntry } from "../models/JournalEntry";
+import { type JournalEntry } from "../types/JournalEntry";
 
 interface AddJournalEntryProps {
   addJournalEntryCallBack: (newEntry: JournalEntry) => void;
@@ -54,7 +54,7 @@ const AddJournalEntry: React.FC<AddJournalEntryProps> = ({
           onChange={(newValue) => setNewDate(newValue)}
         />
       </LocalizationProvider>
-      <Button className="add" onClick={handleAddEntry}>
+      <Button className="enter" onClick={handleAddEntry}>
         Add
       </Button>
     </>

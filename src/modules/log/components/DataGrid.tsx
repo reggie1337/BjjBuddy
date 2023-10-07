@@ -1,9 +1,8 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
-import { JournalEntry } from "../models/JournalEntry";
-import JournalModal from "./modal";
-import newJournalItem from "./AddItems";
+import { DataGrid, GridColDef } from "@mui/x-data-grid";
+import { type JournalEntry } from "../types/JournalEntry";
+import JournalModal from "./Modal";
 
 interface Props {
   rows: JournalEntry[];
@@ -33,7 +32,7 @@ const DataGridDemo: React.FC<Props> = ({ rows, removeTodosCallback }) => {
       align: "left",
       filterable: false,
       renderCell: (params) => {
-        const removeEntry = (e: any) => {
+        const removeTodo = (e: any) => {
           e.stopPropagation();
           removeTodosCallback(params.row.id);
         };
@@ -41,7 +40,7 @@ const DataGridDemo: React.FC<Props> = ({ rows, removeTodosCallback }) => {
           <>
             {/* <button className="enter">Open</button> */}
             <JournalModal />
-            <button className="enter" onClick={removeEntry}>
+            <button className="enter" onClick={removeTodo}>
               Delete
             </button>
             {/* add archive function and send to archive pages */}
