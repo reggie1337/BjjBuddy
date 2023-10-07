@@ -1,63 +1,58 @@
-*{
-
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-  font-family: sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  /* padding: 30px; */
+body {
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    /* padding: 30px; */
 }
 
 .App {
-  text-align: center;
-  margin-top: 5;
+    text-align: center;
+    margin-top: 5;
 }
- 
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  object-fit: contain;
-  width: auto;
-  
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    object-fit: contain;
+    width: auto;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 .title {
-  color: rgb(243, 237, 237);
-
+    color: rgb(243, 237, 237);
 }
 
 .enter {
-  background-color:white;
-  border: 1px solid #303134;
-  border-radius: 4px;
-  color: black;
-  font-family: Roboto,arial,sans-serif;
-  font-size: 14px;
-  margin: 11px 4px;
-  padding: 0 16px;
-  line-height: 27px;
-  height: 36px;
-  min-width: 54px;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
+    background-color: white;
+    border: 1px solid #303134;
+    border-radius: 4px;
+    color: black;
+    font-family: Roboto, arial, sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
 }
-
 
 /* .enter:active {
   box-shadow: 0 2px #666;
@@ -65,87 +60,84 @@ body{
 } */
 
 .enter:hover {
-  background-color: lightgray;
+    background-color: lightgray;
 }
 
 .site {
-  background-color:white;
-  border: 1px solid #303134;
-  border-radius: 4px;
-  color: black;
-  font-family: Roboto,arial,sans-serif;
-  font-size: 14px;
-  margin: 11px 4px;
-  padding: 0 16px;
-  line-height: 27px;
-  height: 36px;
-  min-width: 54px;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
+    background-color: white;
+    border: 1px solid #303134;
+    border-radius: 4px;
+    color: black;
+    font-family: Roboto, arial, sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
 }
 
 .site:hover {
-  background-color: lightgray;
-
+    background-color: lightgray;
 }
 
 .add {
-  position: relative;
-  background-color:white;
-  border: 1px solid #303134;
-  border-radius: 4px;
-  color: black;
-  font-family: Roboto,arial,sans-serif;
-  font-size: 14px;
-  margin: 16px ;
-  left: 10px;
-  bottom: 5px;
-  padding: 0 16px;
-  line-height: 27px;
-  height: 36px;
-  min-width: 54px;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
+    position: relative;
+    background-color: white;
+    border: 1px solid #303134;
+    border-radius: 4px;
+    color: black;
+    font-family: Roboto, arial, sans-serif;
+    font-size: 14px;
+    margin: 16px;
+    left: 10px;
+    bottom: 5px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
 }
 
-
 .Front-page {
-  position: absolute;
-  top: 30%;
-  left: 65%;
+    position: absolute;
+    top: 30%;
+    left: 65%;
 }
 
 .backgroundPhoto {
-  opacity: 1;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* clip-path: polygon(100% 40%, 100px 0 , 0 400px, 0 50%); */
+    opacity: 1;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* clip-path: polygon(100% 40%, 100px 0 , 0 400px, 0 50%); */
 }
 
 .textArea {
-  /* margin-left:  ;  */
-  /* margin-top:  */
+    /* margin-left:  ;  */
+    /* margin-top:  */
 }
- 
+
 .appTitle {
-  margin-left: 14px;
+    margin-left: 14px;
 }
 
-
-.calender{
-  display: inline-block;
-  margin-left: 8px !important;
+.calender {
+    display: inline-block;
+    margin-left: 8px !important;
 }
 
 .taskTable {
-  margin-left: 50px;
-  margin-top: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
 }
 
 .page-container {
-  padding: 20px;
+    padding: 20px;
 }

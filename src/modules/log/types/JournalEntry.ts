@@ -1,7 +1,7 @@
-import { Dayjs } from "dayjs";
+import { type Dayjs } from 'dayjs';
 
-export type JournalEntry = {
-  id: number;
-  value: string;
-  date: Dayjs;
-};
+export interface JournalEntry {
+    id: number;
+    value: string;
+    date: Dayjs;
+}
